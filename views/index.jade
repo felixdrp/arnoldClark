@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  div.main(ng-controller='userInterface')
+    h1= title
+    p Welcome to #{title}
+    div
+      ul.control
+        li
+          div Stock Reference
+            input(ng-model="stockReference", type="text", ng-init="stockReference='arnyam-u-232603'", required="")
+          div Registration Plate
+            input(ng-model="registrationPlate", type="text", ng-init="registrationPlate='ND13FXZ'", required="")
+
+        li
+          button(ng-click="loadImages(query)") Load
+      div.preview
+        img(ng-repeat="photo in photos", ng-src="{{photo.preview}}", ng-click="changeShowRoomImage(photo.showRoom)") 
+
+    div.show-room(ng-click="shiftFullScreen($event)", ng-class="{'full-screen':fullScreen}", ng-show="imageAvailable")
+      img(ng-click="shiftFullScreen($event)", ng-src="{{showRoomImage}}")
+      div.button-left(ng-show="fullScreen", ng-click="shiftFullScreenImageRight($event)")
+        div(ng-show="fullScreen", ng-click="shiftFullScreenImageLeft($event)")        
+      div.button-right(ng-show="fullScreen", ng-click="shiftFullScreenImageRight($event)")
+        div(ng-show="fullScreen", ng-click="shiftFullScreenImageRight($event)")
+
+    div.title-showRoom(ng-hide="imageAvailable")  {{notificationArea}}

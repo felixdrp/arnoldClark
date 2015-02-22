@@ -1,0 +1,220 @@
+//variables
+@main-header: 50px;
+@main-left-margin: 50px;
+@shadow-width: -1px;
+@shadow-color: #eee;
+body {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #ccc;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.main {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.main h1 {
+  position: absolute;
+  top: -2px;
+  left: 50px;
+  text-shadow: 2px 0px 1px @shadow-color,
+              -2px 0px 1px @shadow-color,
+               0px 2px 1px @shadow-color,
+               0px -2px 1px @shadow-color, 
+               2px 2px 0px @shadow-color, 
+              -2px -2px 0px @shadow-color, 
+               2px -2px 0px @shadow-color, 
+              -2px 2px 0px @shadow-color;
+}
+
+.main p {
+  margin-left: @main-left-margin;
+  margin-top: @main-header;
+}
+
+// Rotate an html element
+.rotation(@deg) {
+      -moz-transform:rotate(@deg);
+      -webkit-transform:rotate(@deg);
+      -o-transform:rotate(@deg);
+      -ms-transform:rotate(@deg);
+      transform:rotate(@deg);
+}
+
+.main {
+  .title-showRoom {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+    text-shadow: 2px 0px 1px @shadow-color,
+              -2px 0px 1px @shadow-color,
+               0px 2px 1px @shadow-color,
+               0px -2px 1px @shadow-color, 
+               2px 2px 0px @shadow-color, 
+              -2px -2px 0px @shadow-color, 
+               2px -2px 0px @shadow-color, 
+              -2px 2px 0px @shadow-color;
+
+  }
+
+  .show-room img {
+    margin-top: 20px;
+    margin-left: @main-left-margin;
+    max-width: 50%;
+    box-shadow: -1px 2px 18px 0px #fff;
+  }
+
+  .show-room.full-screen {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color:rgba(0, 0, 0, 0.5);
+   
+    img {
+      position: absolute;
+      margin: 0 auto;
+      top: 50%;
+      left: 50%;
+      -moz-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+
+      @media screen and (orientation: landscape) {
+	width: 70%;
+      }
+
+      @media only screen and (max-device-width: 1280px) and (orientation:landscape) { 
+	width:100%;
+	height:auto;
+      }
+
+      @media (min-width: 700px) and (orientation: portrait) {
+        font-size: 100px;
+      }
+
+      box-shadow: -1px 2px 18px 0px #fff;
+    }
+
+    .button-left {
+      position: absolute;
+      top: 50%;
+      left: 15%;
+      height: 80px;
+      width: 80px;
+      .rotation(45deg);
+      border-radius: 10px;
+      border:2px solid #FFFFFF;
+      border-top: rgba(0, 0, 0, 0.5);
+      border-right: rgba(0, 0, 0, 0.5);
+      cursor: pointer;
+      &:hover {
+        box-shadow: -4px 4px 2px 1px #ccc;
+      }
+	  
+      div {
+        position: absolute;
+	top: 8px;
+	right: 8px;
+	height: 60px;
+	width: 60px;
+	border-radius: 16px 180px 16px 16px;
+	border:2px solid #FFFFFF;
+	border-top: rgba(0, 0, 0, 0.5);
+	border-right: rgba(0, 0, 0, 0.5);
+      }
+    }
+
+    .button-right {
+      position: absolute;
+      top: 50%;
+      right: 15%;
+      height: 80px;
+      width: 80px;
+      .rotation(-135deg);
+      border-radius: 16px;
+      border:2px solid #FFFFFF;
+      border-top: rgba(0, 0, 0, 0.5);
+      border-right: rgba(0, 0, 0, 0.5);
+      cursor: pointer;
+      &:hover {
+        box-shadow: -4px 4px 2px 1px #ccc;
+      }
+
+      div {
+        position: absolute;
+	top: 8px;
+	left: 10px;
+	height: 60px;
+	width: 60px;
+	border-radius: 16px 180px 16px 16px;
+	border:2px solid #FFFFFF;
+	border-top: rgba(0, 0, 0, 0.5);
+	border-right: rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+}
+
+.control {
+  position: absolute;
+  top: 0;
+  right: 40px;
+  margin: 20px 40px;
+  list-style-type: none;
+  li {
+    display: inline-block;
+    vertical-align: text-top;
+
+    div {
+      text-align: right;
+      input {
+	margin-left: 10px;
+      }
+    }
+
+    button {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin-left: 10px;
+      border:1px solid #999;
+      box-shadow: -1px 2px 18px 0px #fff;
+      border-radius: 4px;
+    }
+  }
+}
+
+.preview {
+  position: absolute;
+  right: 0;
+  width: 32%;
+  margin-top: 20px;
+  
+  img {
+    cursor: pointer;
+    display: inline;
+    width: 45%;
+    margin: 3px;
+    border-radius: 0px 18px 0px 0px;
+    border:1px solid #FFFFFF;
+  }
+}

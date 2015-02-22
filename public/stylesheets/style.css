@@ -1,0 +1,181 @@
+body {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #ccc;
+}
+a {
+  color: #00B7FF;
+}
+.main {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.main h1 {
+  position: absolute;
+  top: -2px;
+  left: 50px;
+  text-shadow: 2px 0px 1px #eeeeee, -2px 0px 1px #eeeeee, 0px 2px 1px #eeeeee, 0px -2px 1px #eeeeee, 2px 2px 0px #eeeeee, -2px -2px 0px #eeeeee, 2px -2px 0px #eeeeee, -2px 2px 0px #eeeeee;
+}
+.main p {
+  margin-left: 50px;
+  margin-top: 50px;
+}
+.main .title-showRoom {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  font-size: 25px;
+  text-shadow: 2px 0px 1px #eeeeee, -2px 0px 1px #eeeeee, 0px 2px 1px #eeeeee, 0px -2px 1px #eeeeee, 2px 2px 0px #eeeeee, -2px -2px 0px #eeeeee, 2px -2px 0px #eeeeee, -2px 2px 0px #eeeeee;
+}
+.main .show-room img {
+  margin-top: 20px;
+  margin-left: 50px;
+  max-width: 50%;
+  box-shadow: -1px 2px 18px 0px #ffffff;
+}
+.main .show-room.full-screen {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.main .show-room.full-screen img {
+  position: absolute;
+  margin: 0 auto;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  box-shadow: -1px 2px 18px 0px #ffffff;
+}
+@media screen and (orientation: landscape) {
+  .main .show-room.full-screen img {
+    width: 70%;
+  }
+}
+@media only screen and (max-device-width: 1280px) and (orientation: landscape) {
+  .main .show-room.full-screen img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (min-width: 700px) and (orientation: portrait) {
+  .main .show-room.full-screen img {
+    font-size: 100px;
+  }
+}
+.main .show-room.full-screen .button-left {
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  height: 80px;
+  width: 80px;
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  border-radius: 10px;
+  border: 2px solid #FFFFFF;
+  border-top: rgba(0, 0, 0, 0.5);
+  border-right: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+.main .show-room.full-screen .button-left:hover {
+  box-shadow: -4px 4px 2px 1px #cccccc;
+}
+.main .show-room.full-screen .button-left div {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  height: 60px;
+  width: 60px;
+  border-radius: 16px 180px 16px 16px;
+  border: 2px solid #FFFFFF;
+  border-top: rgba(0, 0, 0, 0.5);
+  border-right: rgba(0, 0, 0, 0.5);
+}
+.main .show-room.full-screen .button-right {
+  position: absolute;
+  top: 50%;
+  right: 15%;
+  height: 80px;
+  width: 80px;
+  -moz-transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+  border-radius: 16px;
+  border: 2px solid #FFFFFF;
+  border-top: rgba(0, 0, 0, 0.5);
+  border-right: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+.main .show-room.full-screen .button-right:hover {
+  box-shadow: -4px 4px 2px 1px #cccccc;
+}
+.main .show-room.full-screen .button-right div {
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  height: 60px;
+  width: 60px;
+  border-radius: 16px 180px 16px 16px;
+  border: 2px solid #FFFFFF;
+  border-top: rgba(0, 0, 0, 0.5);
+  border-right: rgba(0, 0, 0, 0.5);
+}
+.control {
+  position: absolute;
+  top: 0;
+  right: 40px;
+  margin: 20px 40px;
+  list-style-type: none;
+}
+.control li {
+  display: inline-block;
+  vertical-align: text-top;
+}
+.control li div {
+  text-align: right;
+}
+.control li div input {
+  margin-left: 10px;
+}
+.control li button {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin-left: 10px;
+  border: 1px solid #999;
+  box-shadow: -1px 2px 18px 0px #ffffff;
+  border-radius: 4px;
+}
+.preview {
+  position: absolute;
+  right: 0;
+  width: 32%;
+  margin-top: 20px;
+}
+.preview img {
+  cursor: pointer;
+  display: inline;
+  width: 45%;
+  margin: 3px;
+  border-radius: 0px 18px 0px 0px;
+  border: 1px solid #FFFFFF;
+}
